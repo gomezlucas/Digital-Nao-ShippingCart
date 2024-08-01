@@ -1,0 +1,51 @@
+.shipping{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 270px;
+  height: 110px;
+  padding: 20px;
+  background: white;
+  border-radius: 3px;
+  min-width: 350px;
+}
+
+.shipping .input-wrapper{
+  display: flex;
+  column-gap: 1rem;
+  position: relative;
+  align-items: center;
+}
+
+.shipping label{
+  display: flex;
+   align-items: center;
+}
+
+.shipping input{
+  padding: 5px 10px;
+ 
+  flex: 1;
+  margin-right: 0.5rem;
+
+}
+  
+ 
+.shipping > h2{
+  font-weight: 400;
+  text-transform: uppercase;
+}
+ 
+
+@media(max-width:800px){
+  .shipping{
+    width: unset;
+    text-align: center;
+  }
+}
+
+@media(max-width:900px){
+  .shipping{
+    min-width: unset;
+  }
+}

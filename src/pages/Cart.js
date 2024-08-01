@@ -1,6 +1,9 @@
 import './cart.css'
 import Total from '../components/Total'
+import Discount from '../components/Discount'
+import Shipping from '../components/Shipping'
 import CartItem from '../components/CartItem'
+
 import { useSelector } from 'react-redux'
 
 function Cart() {
@@ -27,6 +30,8 @@ function Cart() {
 
       <div className="cart__right">
         <Total/>
+        <Discount />
+         <Shipping/>
       </div>
 
     </div>
