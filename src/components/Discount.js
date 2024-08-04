@@ -8,7 +8,6 @@ function Discount() {
   const [discountCode, setDiscountCode] = useState("");
   const discountSaved = useSelector((state) => state.discount);
   const cart = useSelector((state) => state.cart);
-  console.log(cart, "cart");
   const dispatch = useDispatch();
 
   const handleChange = (event) => {

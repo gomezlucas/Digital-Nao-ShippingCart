@@ -1,6 +1,7 @@
 import './cartItem.css'
 import { incrementQuantity, decrementQuantity, removeItem} from '../redux/cartSlice'
 import { useDispatch } from 'react-redux'
+import {  toast } from "react-toastify";
 
 function CartItem({id, image, title, price, quantity=0}) {
   const dispatch = useDispatch()
@@ -21,7 +22,10 @@ function CartItem({id, image, title, price, quantity=0}) {
         </div>
         <button
           className='cartItem__removeButton' 
-          onClick={() => dispatch(removeItem(id))}>
+          onClick={() => {
+            toast.error(`El producto fue eliminado al Carrito.`)  
+            dispatch(removeItem(id))           
+            }}>
             Remove
         </button>
       </div>

@@ -3,6 +3,7 @@ import Total from '../components/Total'
 import Discount from '../components/Discount'
 import Shipping from '../components/Shipping'
 import CartItem from '../components/CartItem'
+import { Link } from 'react-router-dom';
 
 import { useSelector } from 'react-redux'
 
@@ -33,7 +34,7 @@ function Cart() {
         <Discount />
          <Shipping/>
       </div>
-
+         <Link to="/">Back to Home </Link>
     </div>
   )
 }
